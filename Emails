@@ -1,0 +1,55 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import smtplib\n",
+    "host = \"smtplib.gmail.com\"\n",
+    "port = 587\n",
+    "username = \"customer.py2020@gmail.com\"\n",
+    "password = \"python2020\" \n",
+    "from_mail = username\n",
+    "to_list = \"customer.py2020@gmail.com\"\n",
+    "\n",
+    "\n",
+    "email_connect = smtplib.SMTP(host,port)\n",
+    "#email_connect.ehlo()\n",
+    "email_connect.starttls(username,password)\n",
+    "try:\n",
+    "    email_connect.login(username,password)\n",
+    "    email_connect.sendmail(from_mail, to_list,\"hello there this is an email email message\")\n",
+    "except SMTPAuthenticationError:\n",
+    "    print(\"could not log in\")\n",
+    "except:\n",
+    "    print(\"an errot occured\")\n",
+    "#email_connect.quite()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}
